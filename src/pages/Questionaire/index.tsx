@@ -152,15 +152,18 @@ const Questionaire = () => {
           </motion.div>
         ))}
 
-        {getTotalQuestions && (
+        {roundedOffQuestionaire && (
           <div className="flex justify-end">
             <button
               type="submit"
               onClick={() => submitQuestionaire(setIsLoading, navigate)}
-              disabled={isLoading || getTotalQuestions() < 12}
+              disabled={
+                isLoading ||
+                getTotalQuestions() < roundedOffQuestionaire()?.length
+              }
               className="shadow-lg sm:mt-[10px] md:mt-0 ml-0 md:ml-[5px] min-h-[40px] rounded-lg min-w-[190px] w-full md:w-auto flex justify-center items-center outline-none hover:border-2 hover:border-green-600 hover:text-green-600 bg-green-600 hover:bg-white text-white disabled:cursor-not-allowed cursor-pointer disabled:bg-gray-50 disabled:text-gray-500 disabled:border-none"
             >
-              {isLoading ? <div>Submitting </div> : "Submit"}
+              {isLoading ? <div>Submitting ... </div> : "Submit"}
             </button>
           </div>
         )}
