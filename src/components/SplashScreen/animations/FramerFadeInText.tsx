@@ -36,7 +36,7 @@ const FramerFadeInText: React.FC<PageProps> = ({ text }) => {
   return (
     <motion.div
       exit={{ opacity: 0, y: -50, transition: { duration: 0.5 } }} // 👈 global exit
-      className="font-montserrat font-[600] flex flex-row justify-center items-center h-screen w-screen"
+      className="font-montserrat font-[600] flex flex-row justify-center items-center h-screen w-screen overflow-hidden"
     >
       {letters.map((letter, i) => (
         <motion.h1
