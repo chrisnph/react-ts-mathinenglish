@@ -89,7 +89,7 @@ const Questionaire = () => {
       }}
       className="w-full min-h-screen bg-gradient-to-br from-green-50 to-green-100 flex flex-col justify-start items-center py-10"
     >
-      <h1 className="text-3xl md:text-4xl font-extrabold text-green-700 drop-shadow-md mb-6">
+      <h1 className="px-[24px] md:px-0 text-2xl md:text-4xl font-extrabold text-green-700 drop-shadow-md mb-6">
         Rounding Off to Nearest 10
       </h1>
 
@@ -160,7 +160,7 @@ const Questionaire = () => {
               disabled={isLoading || getTotalQuestions() < 12}
               className="shadow-lg sm:mt-[10px] md:mt-0 ml-0 md:ml-[5px] min-h-[40px] rounded-lg min-w-[190px] w-full md:w-auto flex justify-center items-center outline-none hover:border-2 hover:border-green-600 hover:text-green-600 bg-green-600 hover:bg-white text-white disabled:cursor-not-allowed cursor-pointer disabled:bg-gray-50 disabled:text-gray-500 disabled:border-none"
             >
-              {isLoading ? "Submitting ..." : "Submit"}
+              {isLoading ? <div>Submitting </div> : "Submit"}
             </button>
           </div>
         )}
