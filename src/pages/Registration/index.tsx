@@ -52,11 +52,11 @@ const Registration = () => {
       variants={variant}
       animate="show"
       exit={{ opacity: 0, y: -50, transition: { duration: 0.5 } }}
-      className="h-screen flex justify-center items-center font-bold"
+      className="min-h-screen flex flex-col justify-center font-bold overflow-auto p-4"
     >
       <form
         onSubmit={form.handleSubmit}
-        className="w-full md:max-w-[60%] h-[60px]"
+        className="w-full md:max-w-[60%] h-[100px]"
       >
         <div className="flex flex-col md:flex-row justify-center items-center h-[50px]">
           <input
