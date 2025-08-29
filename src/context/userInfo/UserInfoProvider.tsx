@@ -1,5 +1,6 @@
 import { useState, type ReactNode } from "react";
 import { UserInfoContext, type UserInfoType } from "./UserInfoContext";
+import { roundedOffQuestionaire } from "../../questionaire";
 
 export const UserInfoProvider = ({ children }: { children: ReactNode }) => {
   const [userInfo, setUserInfo] = useState<UserInfoType | null>(() => {
@@ -14,7 +15,7 @@ export const UserInfoProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const getTotalQuestions = () => {
-    return userInfo?.questionaire.length || 0;
+    return roundedOffQuestionaire()?.length;
   };
 
   return (
