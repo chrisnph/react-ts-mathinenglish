@@ -52,7 +52,7 @@ const Registration = () => {
       variants={variant}
       animate="show"
       exit={{ opacity: 0, y: -50, transition: { duration: 0.5 } }}
-      className="min-h-screen flex flex-col justify-center font-bold overflow-auto p-4"
+      className="min-h-screen flex flex-col justify-center items-center font-bold overflow-auto p-4"
     >
       <form
         onSubmit={form.handleSubmit}
