@@ -46,12 +46,12 @@ const FramerFadeInText: React.FC<PageProps> = ({ text }) => {
           variants={variant}
           animate="show"
           onAnimationComplete={() => handleSplashScreenEnd(i)}
-          className="text-center text-[rgba(0,0,0,0.5)] leading-tight tracking-widest"
+          className="text-center text-[rgba(0,0,0,0.5)] leading-tight tracking-wide md:tracking-widest h-screen flex items-center"
         >
           {letter === " " ? (
             <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
           ) : (
-            <span className="text-[2.2rem] md:text-[3.2rem] text-3xl md:text-4xl font-extrabold text-green-200 drop-shadow-md mb-6 inline-block [text-shadow:2px_2px_6px_rgba(0,0,0,0.5)]">
+            <span className="text-[2rem] md:text-[3.2rem] text-3xl md:text-4xl font-extrabold text-green-200 drop-shadow-md mb-6 inline-block [text-shadow:2px_2px_6px_rgba(0,0,0,0.5)]">
               {letter}
             </span>
           )}
