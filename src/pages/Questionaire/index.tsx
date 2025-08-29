@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import submitQuestionaire from "./apis/submitQuestionaire";
 import { useNavigate } from "react-router-dom";
 import { useUserInfo } from "../../context/userInfo/UserInfoContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 type QuestionaireIDType = {
   questionId?: number;
@@ -163,7 +165,18 @@ const Questionaire = () => {
               }
               className="shadow-lg sm:mt-[10px] md:mt-0 ml-0 md:ml-[5px] min-h-[40px] rounded-lg min-w-[190px] w-full md:w-auto flex justify-center items-center outline-none hover:border-2 hover:border-green-600 hover:text-green-600 bg-green-600 hover:bg-white text-white disabled:cursor-not-allowed cursor-pointer disabled:bg-gray-50 disabled:text-gray-500 disabled:border-none"
             >
-              {isLoading ? <div>Submitting ... </div> : "Submit"}
+              {isLoading ? (
+                <div className="flex justify-center items-center text-green-600">
+                  <div className="pr-3">Submitting</div>
+                  <FontAwesomeIcon
+                    icon={faSpinner}
+                    spin
+                    className="text-green-600"
+                  />
+                </div>
+              ) : (
+                "Submit"
+              )}
             </button>
           </div>
         )}
